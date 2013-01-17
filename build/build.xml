@@ -13,7 +13,9 @@
     <mkdir dir="output/${version}/${language}"/>
     <mkdir dir="figures"/>
 
-    <copy file="docbook.css" todir="output/${version}/${language}"/>
+    <copy todir="output/${version}/${language}">
+      <fileset dir="assets"/>
+    </copy>
 
     <exec dir="${basedir}" executable="xsltproc" failonerror="true">
       <arg line="--stringparam base.dir output/${version}/${language}/ --stringparam l10n.gentext.language ${language} html-chunked.xsl ../src/${version}/${language}/book.xml"/>

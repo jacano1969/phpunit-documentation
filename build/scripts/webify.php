@@ -57,10 +57,10 @@ function webify_directory($directory, $edition)
             }
 
             $_editions .= sprintf(
-              '<li><a href="http://www.phpunit.de/manual/%s/%s/index.html"%s>PHPUnit %s <span><small>%s</small></span></a></li>',
+              '<li%s><a href="http://www.phpunit.de/manual/%s/%s/index.html">%s (%s)</a></li>',
+              $active,
               $version,
               $language,
-              $active,
               $version,
               $_language
             );

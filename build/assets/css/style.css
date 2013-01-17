@@ -1,0 +1,38 @@
+body {
+ padding-top: 60px;
+ padding-bottom: 40px;
+}
+
+.sidebar-nav {
+ padding: 9px 0;
+}
+
+pre span.bg {
+ color: #eeeeec;
+ font-weight: bold;
+}
+
+pre span.comment {
+ color: #8f5902;
+ font-weight: bold;
+}
+
+pre span.default {
+ color: #204a87;
+ font-weight: bold;
+}
+
+pre span.html {
+ color: #000000;
+ font-weight: bold;
+}
+
+pre span.keyword {
+ color: #4e9a06;
+ font-weight: bold;
+}
+
+pre span.string {
+ color: #a40000;
+ font-weight: bold;
+}
