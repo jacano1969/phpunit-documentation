@@ -1,6 +1,6 @@
 <project name="phpunit-manual" default="build-current" basedir=".">
-  <target name="check-current" depends="check-en-3.8,check-fr-3.8,check-ja-3.8,check-en-3.7,check-fr-3.7,check-ja-3.7,check-pt_br-3.8,check-pt_br-3.7"/>
-  <target name="build-current" depends="build-en-3.8,build-fr-3.8,build-ja-3.8,build-en-3.7,build-fr-3.7,build-ja-3.7,build-pt_br-3.8,build-pt_br-3.7"/>
+  <target name="check-current" depends="check-en-3.8,check-es-3.8,check-fr-3.8,check-ja-3.8,check-en-3.7,check-es-3.7,check-fr-3.7,check-ja-3.7,check-pt_br-3.8,check-pt_br-3.7"/>
+  <target name="build-current" depends="build-en-3.8,build-es-3.8,build-fr-3.8,build-ja-3.8,build-en-3.7,build-es-3.7,build-fr-3.7,build-ja-3.7,build-pt_br-3.8,build-pt_br-3.7"/>
 
   <target name="check">
     <exec dir="${basedir}" executable="xmllint" failonerror="true">
@@ -221,6 +221,20 @@
     </antcall>
   </target>
 
+  <target name="build-es-3.7" depends="check-es-3.7">
+    <antcall target="build">
+      <param name="language" value="es"/>
+      <param name="version" value="3.7"/>
+    </antcall>
+  </target>
+
+  <target name="build-es-3.8" depends="check-es-3.8">
+    <antcall target="build">
+      <param name="language" value="es"/>
+      <param name="version" value="3.8"/>
+    </antcall>
+  </target>
+
   <target name="build-pt_br-3.7" depends="check-pt_br-3.7">
     <antcall target="build">
       <param name="language" value="pt_br"/>
@@ -399,6 +413,20 @@
   <target name="check-fr-3.8">
     <antcall target="check">
       <param name="language" value="fr"/>
+      <param name="version" value="3.8"/>
+    </antcall>
+  </target>
+
+  <target name="check-es-3.7">
+    <antcall target="check">
+      <param name="language" value="es"/>
+      <param name="version" value="3.7"/>
+    </antcall>
+  </target>
+
+  <target name="check-es-3.8">
+    <antcall target="check">
+      <param name="language" value="es"/>
       <param name="version" value="3.8"/>
     </antcall>
   </target>
